@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tuấn Tiền Tỉ">
+    <meta name="generator" content="Tuấn Tiền Tỉ">
     <title>Báo Thức Thông Minh - Antigravity</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -625,6 +627,44 @@
         .sound-status.active {
             color: #10b981;
         }
+
+        .credit {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .credit span {
+            display: inline-block;
+            background: linear-gradient(135deg, #a78bfa, #f472b6, #818cf8);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            padding: 8px 24px;
+            border-radius: 30px;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            background-color: rgba(139, 92, 246, 0.08);
+            animation: shimmer 3s ease-in-out infinite alternate, glowPulse 2s ease-in-out infinite alternate;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 10px rgba(139, 92, 246, 0.15); }
+            100% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.35); }
+        }
     </style>
 </head>
 <body>
@@ -697,6 +737,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Credit -->
+    <div class="credit"><span>TẠO BỞI TUẤN TIỀN TỈ</span></div>
 
     <!-- Alarm Ringing Fullscreen Overlay -->
     <div class="alarm-overlay" id="alarm-overlay">
